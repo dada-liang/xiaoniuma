@@ -24,4 +24,4 @@ jobs:
           npm install md5-node
       - name: '运行 【Share with youth】'
         run: |
-          node task/youthshare.js
+          node woyebuzhidao/youthshare.js
