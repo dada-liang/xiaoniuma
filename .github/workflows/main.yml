@@ -13,7 +13,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
-      - name: Use Node.js 10.x
         uses: actions/checkout@v2
 
       - name: 'Set up Python'
@@ -22,14 +21,11 @@ jobs:
           python-version: 3.7
 
       - name: 'Install requests'
-        run: 
-         cd ~/scripts
-         pip install requests
+        run: pip install requests
 
       - name: 'run Youth'
         # youth_read.py目录自己修改
-        run:
-         python3 woyebuzhidao/youth.py
+        run: python3 woyebuzhidao/youth.py
         # 目前最大5个账号，可按格式继续填写
         env:
             BARK: ${{ secrets.BARK }}  #非必须 bark通知
