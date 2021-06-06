@@ -28,7 +28,10 @@ jobs:
 
       - name: 'run Youth'
         # youth_read.py目录自己修改
-        run: python3 youth.py
+        
+        run:
+         cd ~/scripts
+         python3 youth.py
         # 目前最大5个账号，可按格式继续填写
         env:
             BARK: ${{ secrets.BARK }}  #非必须 bark通知
