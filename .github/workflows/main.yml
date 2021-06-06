@@ -1,4 +1,4 @@
-name: Youth
+name: zhongqing
 
 on:
   schedule:
@@ -23,10 +23,8 @@ jobs:
       - name: 'Install requests'
         run: pip install requests
 
-      - name: 'run Youth'
-        # youth_read.py目录自己修改
-        run: python3 woyebuzhidao/youth.py
-        # 目前最大5个账号，可按格式继续填写
+      - name: 'run zhongqing'
+        run: python3 woyebuzhidao/zhongqing.py
         env:
             BARK: ${{ secrets.BARK }}  #非必须 bark通知
             SCKEY: ${{ secrets.SCKEY }}  #非必须 server酱通知
